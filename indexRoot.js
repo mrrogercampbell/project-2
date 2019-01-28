@@ -7,10 +7,10 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-const appController = require('./controllers/appControllers')
+const routes = require('./routes/appRoutes')
 
 // Where am I going to direct this?
-app.use('/api/bookmarks/', bookmarksController)
-app.use('./routes/appRoutes', bookmarksController)
+app.use('/', routes)
 
-app.listen(8080, () => console.log('They see me rollin...on port 8080...'))
+
+app.listen(3000, () => console.log('They see me rollin...on port 8080...'))
