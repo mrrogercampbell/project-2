@@ -4,6 +4,7 @@ const UserSchema = new mongoose.Schema({
     photo: String,
     name: {
         firstName: String,
+        middleName: String,
         lastName: String,
     },
     rank: String,
@@ -16,7 +17,7 @@ const UserSchema = new mongoose.Schema({
     serialNumber: String,
 })
 
-mongoose.model('User', UserSchema)
 
 
-module.exports = mongoose
+
+module.exports = mongoose.model('User', UserSchema)

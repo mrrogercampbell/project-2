@@ -1,0 +1,46 @@
+[
+    {
+        "photo": "https://vignette.wikia.nocookie.net/memoryalpha/images/f/fc/Jean-Luc_Picard%2C_2364.jpg/revision/latest/scale-to-width-down/700?cb=20180906020126&path-prefix=en",
+        "name": {
+            "firstName": "Jean-Luc",
+            "lastName": "Picard"
+        },
+        "rank": "Captian",
+        "placeOfBirth": "La Barre, France, Earth",
+        "yearOfBirth": "2305",
+        "monthOfBirth": "7",
+        "dayOfBirth": "13",
+        "gender": "Male",
+        "maritalStatus": "Single",
+        "serialNumber": "SP-937-215" 
+    },
+    {
+        "photo": "https://vignette.wikia.nocookie.net/memoryalpha/images/2/29/William_Riker%2C_2364.jpg/revision/latest/scale-to-width-down/700?cb=20180906183158&path-prefix=en",
+        "name": {
+            "firstName": "William",
+            "middleName": "T",
+            "lastName": "Riker"
+        },
+        "gender":  "Male",
+        "yearOfBirth":  "2335",
+        "monthOfBirth":  "4",
+        "dayOfBirth":  "15",
+        "placeOfBirth":  "Alaska, Earth",
+        "height":  "193",
+        "maritalStatus":  "MARRIED",
+        "serialNumber":  "SC-231-427"    
+    },
+    {
+        "photo": "https://vignette.wikia.nocookie.net/memoryalpha/images/3/30/Benjamin_Sisko%2C_2375.jpg/revision/latest?cb=20160406235406&path-prefix=en",
+        "name": {
+            "firstName": "Benjamin",
+            "middleName": "",
+            "lastName": "Sisko"
+        },
+        "gender":  "Male",
+        "yearOfBirth":  "2332",
+        "placeOfBirth":  "New Orleans, Earth",
+        "yearOfDeath":  "2375",
+        "maritalStatus":  "MARRIED"
+    }
+]
