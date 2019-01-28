@@ -40,9 +40,9 @@ module.exports = {
     show: () => {
         //(GET Request) Show a single user
         (req, res) => {
-            UserModel.find({}).then((results) => {
+            UserModel.findOne({name: req.params.name}).then((results) => {
                 console.log(results)
-                res.send(`${results}`)
+                res.send(results)
             })
         }
     },
@@ -50,19 +50,15 @@ module.exports = {
     edit: () => {
         // (GET Request) Render form to update a single user
         (req, res) => {
-            UserModel.find({}).then((results) => {
-                console.log(results)
-                res.send(`${results}`)
-            })
+           
         }
     },
 
     update: () => {
         (req, res) => {
             // (PUT Request) Update resource in the database
-            UserModel.find({}).then((results) => {
-                console.log(results)
-                res.send(`${results}`)
+            Bookmark.findOneAndUpdate({title: req.params.title}, req.body).then(result => {
+                res.json(result)
             })
         }
     },
@@ -70,9 +66,8 @@ module.exports = {
     destroy: () => {
         //(DELETE Request) Delete a resource
         (req, res) => {
-            UserModel.find({}).then((results) => {
-                console.log(results)
-                res.send(`${results}`)
+            Bookmark.findOneAndRemove({title: req.params.title}).then(result => {
+                releaseEvents.json(result)
             })
         }
     },
