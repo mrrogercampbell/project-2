@@ -1,8 +1,11 @@
-const mongoose = require('mongoose')
-const userModels = require("../models/userModels")
+// const mongoose = require('mongoose')
+// const mongoose = require('../db/connection')
+const mongoose = require('../models/userModels')
+// const User = require('../models/userModels')
+const User = mongoose.model('userModels')
 
 //Need to create DB dir before bring this online
-// mongoose.connect('mongodb://localhost/review')
+mongoose.connect('mongodb://localhost/review')
 
 mongoose.Promise = Promise
 
@@ -13,10 +16,11 @@ mongoose.Promise = Promise
 module.exports = {
     // (GET Request) List all items of Users
     index: (req, res) => {
-            res.send("We in this bitch!")
-            // userModels.find({}).then(result => {
-            //     res.json(result)
-            // })
+            // res.send("We in this bitch!")
+            User.find({}).then(result => {
+                res.json(result)
+                console.log(result)
+            })
         },
 
     // new: () => {
