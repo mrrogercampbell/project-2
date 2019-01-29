@@ -5,8 +5,8 @@ const router = express.Router()
 
 
 router.use('/user', require("./userRoutes"))
-router.use('/starship', require("./starshipRoutes"))
-router.use('/missionBrief', require("./missionRoutes"))
+// router.use('/starship', require("./starshipRoutes"))
+// router.use('/missionBrief', require("./missionRoutes"))
 
 
 
