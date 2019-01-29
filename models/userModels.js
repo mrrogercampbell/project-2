@@ -18,8 +18,6 @@ const User = new Schema({
     serialNumber: String,
 })
 
+mongoose.model('userModels', User)
 
-
-
-module.exports = mongoose.model('userModels', User)
-
+module.exports = mongoose
