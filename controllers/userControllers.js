@@ -17,12 +17,15 @@ mongoose.Promise = Promise
 module.exports = {
     // (GET Request) List all items of Users
     index: (req, res) => {
-            // res.send("We in this bitch!")
-            User.find({}).then(result => {
-                res.json(result)
-                console.log(result)
-            })
-        },
+        User.find({})
+        // .sort({ createdAt: -1 })
+        // .populate('title')
+        // .populate('author')
+        .then(users => {
+            res.render("userViews/usersIndex", { users });
+          })
+        // .catch(err => console.log(err))
+    },
     //(GET Request) Render newUserform.hbs
     new: (req, res) => {
         res.render('userViews/newUserForm')
