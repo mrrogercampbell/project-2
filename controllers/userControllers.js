@@ -5,7 +5,7 @@ const mongoose = require('../models/userModels')
 const User = mongoose.model('userModels')
 
 //Need to create DB dir before bring this online
-mongoose.connect('mongodb://localhost/review')
+mongoose.connect('mongodb://localhost/sof')
 
 mongoose.Promise = Promise
 
@@ -39,9 +39,9 @@ module.exports = {
     create: (req, res) => {
             User.create({
                 name: {
-                    firstName: req.body.name.firstName,
-                    middleName: req.body.name.middleName,
-                    lastName: req.body.name.lastName,
+                    firstName: req.body.firstName,
+                    middleName: req.body.middleName,
+                    lastName: req.body.lastName,
                 }
             }).then(newUser => {
                 console.log(`Hey Check Out the New User ${newUser}`)
