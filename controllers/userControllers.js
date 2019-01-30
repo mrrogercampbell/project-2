@@ -10,6 +10,7 @@ mongoose.connect('mongodb://localhost/review')
 mongoose.Promise = Promise
 
 
+
 // const UserSchema = mongoose.model('User', UserSchema)
 
 
@@ -32,16 +33,19 @@ module.exports = {
     //         })
     //     }
     // },
-
-    // create: () => {
-    //     //(POST Request) Create new user in the database
-    //     (req, res) => {
-    //         UserSchema.create(req.body).then(result => {
-    //             res.json(result)
-    //         })
-    //     }
-    // },
-
+    //(POST Request) Create new user in the database
+    create: (req, res) => {
+            User.create({
+                name: {
+                    firstName: req.body.name.firstName,
+                    middleName: req.body.name.middleName,
+                    lastName: req.body.name.lastName,
+                }
+            }).then(newUser => {
+                console.log(`Hey Check Out the New User ${newUser}`)
+                res.redirect('/')
+            })
+        },
     // show: () => {
     //     //(GET Request) Show a single user
     //     (req, res) => {
