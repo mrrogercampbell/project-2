@@ -1,24 +1,20 @@
-<div>
-    {{#if users}}
-    <ul>
-    {{#each users}}
-        <h1>{{name.firstName}} {{name.middleName}} {{name.lastName}}</h1>
-        {{!-- How would I get the image to show --}}
-        {{!-- <img src="#" alt="Photo of User"> --}}
-        <p>{{rank}}</p>
-        <p>{{placeOfBirth}}</p>
-        <p>{{yearOfBirth}}</p>
-        <p>{{monthOfBirth}}</p>
-        <p>{{dayOfBirth}}</p>
-        <p>{{gender}}</p>
-        <p>{{maritalStatus}}</p>
-        <p>{{serialNumber}}</p>
-        <form action="/user/:id" method="delete">
-        <input type="submit" id="delete-bttn" value="Delete User Profile">
-        </form>
-    {{/each}}
-    </ul>
-    {{/if}}
-</div>
+{{#if users}}
+  <ul>
+  {{#each users}}
+    <h1>{{name.firstName}} {{name.middleName}} {{name.lastName}}</h1>
+    {{!-- How would I get the image to show --}}
+    {{!-- <img src="#" alt="Photo of User"> --}}
+    <p>{{rank}}</p>
+    <p>{{placeOfBirth}}</p>
+    <p>{{yearOfBirth}}</p>
+    <p>{{monthOfBirth}}</p>
+    <p>{{dayOfBirth}}</p>
+    <p>{{gender}}</p>
+    <p>{{maritalStatus}}</p>
+    <p>{{serialNumber}}</p>
+  {{/each}}
+    <button id="delete">Delete</button>
+  </ul>
+{{/if}}
 
 
