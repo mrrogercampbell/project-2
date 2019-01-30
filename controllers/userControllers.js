@@ -23,31 +23,36 @@ module.exports = {
                 console.log(result)
             })
         },
-        new: (req, res) => {
-            res.render('userViews/newUserForm')
-        },
-    // new: () => {
-    //     //(GET Request) Render form to create a new instance of user
-    //     (req, res) => {
-    //         UserSchema.findOne({title: req.params.title})
-    //             .then(result => {
-    //                 res.json(result)
-    //         })
-    //     }
-    // },
+    //(GET Request) Render newUserform.hbs
+    new: (req, res) => {
+        res.render('userViews/newUserForm')
+    },
     //(POST Request) Create new user in the database
     create: (req, res) => {
             User.create({
                 name: {
-                    firstName: req.body.firstName,
-                    middleName: req.body.middleName,
-                    lastName: req.body.lastName,
-                }
+                    firstName:      req.body.firstName,
+                    middleName:     req.body.middleName,
+                    lastName:       req.body.lastName,
+                    // serialNumber: req.body.serialNumber,
+                },
+                rank:           req.body.rank,
+                placeOfBirth:   req.body.placeOfBirth,
+                yearOfBirth:    req.body.yearOfBirth,
+                monthOfBirth:   req.body.monthOfBirth,
+                dayOfBirth:     req.body.dayOfBirth,
+                gender:         req.body.gender,
+                maritalStatus:  req.body.maritalStatus,
             }).then(newUser => {
                 console.log(`Hey Check Out the New User ${newUser}`)
-                res.redirect('/')
+                // res.redirect('/success')
+                res.render('userViews/newUserSuccessPage')
             })
         },
+    //(GET Request) Render newUserSuccessPage.hbs
+    success: (req, res) => {
+        res.render('userViews/newUserSuccessPage')
+    },
     // show: () => {
     //     //(GET Request) Show a single user
     //     (req, res) => {
