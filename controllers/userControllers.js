@@ -15,7 +15,7 @@ mongoose.Promise = Promise
 
 
 module.exports = {
-    // (GET Request) List all items of Users
+    // (GET Request) List all Users
     index: (req, res) => {
         User.find({})
         // .sort({ createdAt: -1 })
@@ -56,6 +56,13 @@ module.exports = {
     success: (req, res) => {
         res.render('userViews/newUserSuccessPage')
     },
+    // (GET Request) Render a View to Show one User Profile
+    showOne: (req, res)=> {
+        User.findOne({_id: req.params.id})
+        .then(users => {
+            res.render("userViews/singleUserView", { users });
+          })
+    },    
     // show: () => {
     //     //(GET Request) Show a single user
     //     (req, res) => {

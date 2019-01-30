@@ -11,7 +11,7 @@ router.post('/', userController.create)
 
 router.get('/success', userController.success)
 
-// router.get('/:id', userController.show)
+router.get('/:id', userController.showOne)
 
 // router.get('/:id/edit', userController.edit)
 
