@@ -13,11 +13,11 @@ router.get('/success', userController.success)
 
 router.get('/:id', userController.showOne)
 
-// router.get('/:id/edit', userController.edit)
+// router.put('/:id/edit', userController.edit)
 
 // router.put('/:id', userController.update)
 
-// router.get('/:id', userController.destroy)
+router.delete('/:id', userController.destroy)
 
 
 

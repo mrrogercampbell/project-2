@@ -62,7 +62,22 @@ module.exports = {
         .then(users => {
             res.render("userViews/singleUserView", { users });
           })
-    },    
+    },
+    destroy: () => {
+        //(DELETE Request) Delete a User Profile
+        (req, res) => {
+            User.findOneAndRemove({_id: req.params.id}).then(result => {
+                releaseEvents.json(result)
+            })
+        }
+    }
+    // (PUT Request) Will allow users to edit their User Profile    
+    // edit: () => {
+    //     // (GET Request) Render form to update a single user
+    //     (req, res) => {
+           
+    //     }
+    // },
     // show: () => {
     //     //(GET Request) Show a single user
     //     (req, res) => {
@@ -73,12 +88,6 @@ module.exports = {
     //     }
     // },
 
-    // edit: () => {
-    //     // (GET Request) Render form to update a single user
-    //     (req, res) => {
-           
-    //     }
-    // },
 
     // update: () => {
     //     (req, res) => {
@@ -89,12 +98,4 @@ module.exports = {
     //     }
     // },
 
-    // destroy: () => {
-    //     //(DELETE Request) Delete a resource
-    //     (req, res) => {
-    //         UserSchema.findOneAndRemove({title: req.params.title}).then(result => {
-    //             releaseEvents.json(result)
-    //         })
-    //     }
-    // }
 }
