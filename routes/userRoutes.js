@@ -5,7 +5,7 @@ const userController = require('../controllers/userControllers')
 
 router.get('/', userController.index)
 
-// router.get('/new', userController.new)
+router.get('/new', userController.new)
 
 router.post('/', userController.create)
 

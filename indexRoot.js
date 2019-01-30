@@ -7,6 +7,8 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
+app.set('view engine', 'hbs')
+
 const routes = require('./routes/appRoutes')
 
 // Where am I going to direct this?

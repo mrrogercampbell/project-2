@@ -23,7 +23,9 @@ module.exports = {
                 console.log(result)
             })
         },
-
+        new: (req, res) => {
+            res.render('userViews/newUserForm')
+        },
     // new: () => {
     //     //(GET Request) Render form to create a new instance of user
     //     (req, res) => {
