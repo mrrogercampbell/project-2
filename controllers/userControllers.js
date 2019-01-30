@@ -59,15 +59,19 @@ module.exports = {
     // (GET Request) Render a View to Show one User Profile
     showOne: (req, res)=> {
         User.findOne({_id: req.params.id})
-        .then(users => {
-            res.render("userViews/singleUserView", { users });
+        .then(user => {
+            res.render("userViews/singleUserView", { user });
           })
     },
     destroy: () => {
         //(DELETE Request) Delete a User Profile
         (req, res) => {
-            User.findOneAndRemove({_id: req.params.id}).then(result => {
+            User.findOneAndRemove({_id: req.params.id})
+            console.log(req.params.id)
+            .then(result => {
+                console.log(result)
                 releaseEvents.json(result)
+                res.render('userViews/newUserSuccessPage')
             })
         }
     }
