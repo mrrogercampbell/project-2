@@ -13,7 +13,9 @@
     <p>{{maritalStatus}}</p>
     <p>{{serialNumber}}</p>
   {{/each}}
-    <button id="delete">Delete</button>
+    <form action="/user/:id" method="delete">
+      <input type="button" value="Delete This User">
+    </form>
   </ul>
 {{/if}}
 
