@@ -28,7 +28,7 @@ module.exports = {
             }).then(newSpaceship => {
                 console.log(`Hey Check Out the New User ${newSpaceship}`)
                 // res.redirect('/success')
-                res.render('starshipViews/starshipIndex')
+                res.redirect(`/starship/${newSpaceship.id}`)
             })
         },
     // //(GET Request) Render newUserSuccessPage.hbs
@@ -50,7 +50,7 @@ module.exports = {
             // res.redirect('/')
             // console.log(result)
             // releaseEvents.json(result)
-            res.render('starshipViews/deleteStarshipSuccessPage', { _id: req.params.id})
+            res.redirect(`/starship`)
         })
     },
     

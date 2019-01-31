@@ -38,7 +38,7 @@ module.exports = {
             }).then(newUser => {
                 console.log(`Hey Check Out the New User ${newUser}`)
                 // res.redirect('/success')
-                res.render('userViews/newUserSuccessPage')
+                res.redirect(`/user/${newUser.id}`)
             })
         },
     //(GET Request) Render newUserSuccessPage.hbs
@@ -59,7 +59,7 @@ module.exports = {
             // res.redirect('/')
             // console.log(result)
             // releaseEvents.json(result)
-            res.render('userViews/newUserSuccessPage', { _id: req.params.id})
+            res.redirect(`/user`)
         })
     },
     
