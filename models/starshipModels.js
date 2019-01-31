@@ -5,20 +5,22 @@ const StarshipSchema = new mongoose.Schema({
 	registry: String,
 	status: String,
 	dateStatus: String,
-	spacecraftClass: String,
-	rankingOfficers:{
-        // This info should come from the user model
-		name: {
-            firstName: String,
-            lastName: String,
-        },
-        ranks: String,
+	spacecraftClass: {
+        name: String,
     },
-    photos: String,
+    // photos: String,
+	// rankingOfficers:{
+    //     // This info should come from the user model
+	// 	name: {
+    //         firstName: String,
+    //         lastName: String,
+    //     },
+    //     ranks: String,
+    // },
     // This info should come from the user model
 })
 
-mongoose.model('Starship', StarshipSchema)
+mongoose.model('starshipModels', Starship)
 
 
 module.exports = mongoose
