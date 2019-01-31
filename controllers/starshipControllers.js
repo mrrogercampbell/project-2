@@ -69,7 +69,8 @@ module.exports = {
             registry: req.body.registry,
             status: req.body.status,
             dateStatus: req.body.dateStatus,
-            spacecraftClass: req.body.spacecraftClass,})
+            spacecraftClass: req.body.spacecraftClass,
+        })
         .then(user => {
             res.render("starshipViews/singleStarshipView", { user });
         })
