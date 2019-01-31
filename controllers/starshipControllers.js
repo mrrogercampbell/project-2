@@ -72,8 +72,9 @@ module.exports = {
                 spacecraftClass: req.body.spacecraftClass,
             }
         })
-        .then(user => {
-            res.render("starshipViews/singleStarshipView", { user });
+        .then(starship => {
+            res.redirect(`/starship/${starship.id}`)
+            // res.render("starshipViews/singleStarshipView", { starship });
         })
     },
 }
