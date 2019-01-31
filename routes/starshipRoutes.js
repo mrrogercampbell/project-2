@@ -11,7 +11,7 @@ router.get('/new', starShipController.new)
 
 // router.post('/', starShipController.create)
 
-// router.get('/:id', starShipController.show)
+router.get('/:id', starShipController.showOne)
 
 // router.get('/:id/edit', starShipController.edit)
 

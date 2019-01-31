@@ -5,8 +5,6 @@ mongoose.connect('mongodb://localhost/sof')
 
 mongoose.Promise = Promise
 
-
-
 module.exports = {
     // (GET Request) List all Users
     index: (req, res) => {
@@ -46,12 +44,12 @@ module.exports = {
     //     res.render('userViews/newUserSuccessPage')
     // },
     // // (GET Request) Render a View to Show one User Profile
-    // showOne: (req, res)=> {
-    //     User.findOne({_id: req.params.id})
-    //     .then(user => {
-    //         res.render("userViews/singleUserView", { user });
-    //       })
-    // },
+    showOne: (req, res)=> {
+        Starship.findOne({_id: req.params.id})
+        .then(ship => {
+            res.render("starshipViews/singleStarshipView", { ship });
+          })
+    },
     // //(DELETE Request) Delete a User Profile
     // delete: (req, res) => {
     // User.findOneAndRemove({_id: req.params.id})

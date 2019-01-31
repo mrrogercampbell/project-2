@@ -1,0 +1,19 @@
+{{#if ship}}
+  {{#with ship}}
+  <div>
+    <h1>{{name}}</h1>
+    <p>{{registry}}</p>
+    <p>{{status}}</p>
+    <p>{{dateStatus}}</p>
+    <p>{{spacecraftClass}}</p>
+  </div>
+ <form action="/user/{{id}}/edit" method="Get">
+    <input type="submit" value="Update User Profile">
+  </form>
+  <form action="/user/{{id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Delete This User">
+  </form>
+  {{/with}}
+{{/if}}
+
+
