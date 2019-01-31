@@ -3,7 +3,7 @@
 {{#if users}}
   <ul>
   {{#each users}}
-    <h1>{{name.firstName}} {{name.middleName}} {{name.lastName}}</h1>
+    <h1><a href="/user/{{id}}">{{name.firstName}} {{name.middleName}} {{name.lastName}}</a></h1>
     {{!-- How would I get the image to show --}}
     {{!-- <img src="#" alt="Photo of User"> --}}
     <p>{{rank}}</p>
