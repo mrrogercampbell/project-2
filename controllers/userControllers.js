@@ -63,18 +63,16 @@ module.exports = {
             res.render("userViews/singleUserView", { user });
           })
     },
-    destroy: () => {
         //(DELETE Request) Delete a User Profile
-        (req, res) => {
-            User.findOneAndRemove({_id: req.params.id})
-            console.log(req.params.id)
-            .then(result => {
-                console.log(result)
-                releaseEvents.json(result)
-                res.render('userViews/newUserSuccessPage')
+        delete: (req, res) => {
+        User.findOneAndRemove({_id: req.params.id})
+            .then( (user) => {
+                // res.redirect('/')
+                // console.log(result)
+                // releaseEvents.json(result)
+                res.render('userViews/newUserSuccessPage', { _id: req.params.id})
             })
         }
-    }
     // (PUT Request) Will allow users to edit their User Profile    
     // edit: () => {
     //     // (GET Request) Render form to update a single user

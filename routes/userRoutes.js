@@ -17,7 +17,7 @@ router.get('/:id', userController.showOne)
 
 // router.put('/:id', userController.update)
 
-router.delete('/:id', userController.destroy)
+router.delete('/:id', userController.delete)
 
 
 

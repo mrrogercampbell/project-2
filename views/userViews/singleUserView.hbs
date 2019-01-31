@@ -1,6 +1,6 @@
 {{#if user}}
-  <ul>
   {{#with user}}
+  <div>
     <h1>{{name.firstName}} {{name.middleName}} {{name.lastName}}</h1>
     {{!-- How would I get the image to show --}}
     {{!-- <img src="#" alt="Photo of User"> --}}
@@ -12,11 +12,11 @@
     <p>{{gender}}</p>
     <p>{{maritalStatus}}</p>
     <p>{{serialNumber}}</p>
-    <form method="POST" action="/user/{{_id}}?_method=DELETE" >
+  </div>
+    <form action="/user/{{id}}?_method=DELETE" method="POST">
       <input type="submit" value="Delete This User">
     </form>
   {{/with}}
-  </ul>
 {{/if}}
 
 
