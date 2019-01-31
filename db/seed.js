@@ -1,14 +1,29 @@
 const mongoose = require('../models/userModels')
-const seeds    = require('./seedData')
+// const seeds = require('./seedData')
+const userSeeds = require('./userSeedData')
+const starshipSeeds = require('./starshipSeedData')
 
 const User = mongoose.model('userModels')
+const Starship = mongoose.model('starshipModels')
 
 mongoose.Promise = Promise
 
 User.remove({}).then(_ => {
   console.log('Dropped the DB')
-  User.collection.insert(seeds).then(users => {
-    console.log(seeds)
+  User.collection.insert(userSeeds).then(users => {
+    console.log(userSeeds)
+    console.log(users)
+    mongoose.connection.close()
+  })
+  .catch(err => {
+    console.log(err)
+  })
+})
+
+Starship.remove({}).then(_ => {
+  console.log('Dropped the DB')
+  Starship.collection.insert(starshipSeeds).then(users => {
+    console.log(starshipSeeds)
     console.log(users)
     mongoose.connection.close()
   })

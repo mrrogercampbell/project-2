@@ -1,4 +1,4 @@
-const mongoose = require('../db/connection')
+const mongoose = require('../models/appModel')
 const Schema = mongoose.Schema
 
 const User = new Schema({

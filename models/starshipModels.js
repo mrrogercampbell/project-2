@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('../models/appModel')
 
 const StarshipSchema = new mongoose.Schema({
 	name: String,
