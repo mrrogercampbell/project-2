@@ -39,28 +39,28 @@ module.exports = {
     // // (GET Request) Render a View to Show one User Profile
     showOne: (req, res)=> {
         Starship.findOne({_id: req.params.id})
-        .then(ship => {
-            res.render("starshipViews/singleStarshipView", { ship });
+        .then(starship => {
+            res.render("starshipViews/singleStarshipView", { starship });
           })
     },
     // //(DELETE Request) Delete a User Profile
     delete: (req, res) => {
     Starship.findOneAndRemove({_id: req.params.id})
-        .then( (user) => {
+        .then( (starship) => {
             // res.redirect('/')
             // console.log(result)
             // releaseEvents.json(result)
-            res.render('starshipViews/DeleteStarshipSuccessPage', { _id: req.params.id})
+            res.render('starshipViews/deleteStarshipSuccessPage', { _id: req.params.id})
         })
     },
     
     // // (GET Request) Render form to update a single user
-    // edit: (req, res) => {
-    //     User.findOne({_id: req.params.id})
-    //     .then(user => {
-    //         res.render('userviews/updateUserForm', { user });
-    //       })
-    // },
+    editForm: (req, res) => {
+        Starship.findOne({_id: req.params.id})
+        .then(starship => {
+            res.render('starshipViews/updateStarshipForm.hbs', { starship });
+          })
+    },
     // // (PUT Request) Update resource in the database
     // update: (req, res) => {
     //     User.findOneAndUpdate({_id: req.params.id}, req.body)
