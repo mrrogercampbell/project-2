@@ -1,6 +1,7 @@
-const mongoose = require('../models/appModel')
+const mongoose = require('../models/userModels')
+const Schema = mongoose.Schema
 
-const StarshipSchema = new mongoose.Schema({
+const Starship = new Schema({
 	name: String,
 	registry: String,
 	status: String,

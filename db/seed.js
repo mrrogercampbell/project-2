@@ -22,9 +22,9 @@ User.remove({}).then(_ => {
 
 Starship.remove({}).then(_ => {
   console.log('Dropped the DB')
-  Starship.collection.insert(starshipSeeds).then(users => {
+  Starship.collection.insert(starshipSeeds).then(starship => {
     console.log(starshipSeeds)
-    console.log(users)
+    console.log(starship)
     mongoose.connection.close()
   })
   .catch(err => {
