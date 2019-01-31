@@ -1,5 +1,4 @@
-// const mongoose = require('../db/connection')
-const mongoose = require('../models/appModel')
+const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
 const Starship = new Schema({
@@ -22,8 +21,7 @@ const Starship = new Schema({
     // This info should come from the user model
 })
 
-// mongoose.model('starshipModels', Starship)
+mongoose.model('starshipModels', Starship)
 
 
-// module.exports = mongoose
-module.exports = mongoose.model('starshipModels', Starship)
+module.exports = mongoose
