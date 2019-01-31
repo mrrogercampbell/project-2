@@ -50,26 +50,26 @@ module.exports = {
             })
         },  
     // // // (GET Request) Render form to update a single user
-    // edit: (req, res) => {
-    //     Starship.findOne({_id: req.params.id})
-    //     .then(starship => {
-    //         res.render('starshipViews/updateStarshipForm.hbs', { starship });
-    //       })
-    // },
+    edit: (req, res) => {
+        MissionBrief.findOne({_id: req.params.id})
+        .then(MissionBrief => {
+            res.render('missionViews/updateMissionBriefForm.hbs', { MissionBrief });
+          })
+    },
     // // // (PUT Request) Update resource in the database
-    // update: (req,res) => {
-    //     Starship.findOneAndUpdate({_id: req.params.id},{
-    //         $set: {
-    //             name: req.body.name,
-    //             registry: req.body.registry,
-    //             status: req.body.status,
-    //             dateStatus: req.body.dateStatus,
-    //             spacecraftClass: req.body.spacecraftClass,
-    //         }
-    //     })
-    //     .then(starship => {
-    //         res.redirect(`/starship/${starship.id}`)
-    //         // res.render("starshipViews/singleStarshipView", { starship });
-    //     })
-    // },
+    update: (req,res) => {
+        MissionBrief.findOneAndUpdate({_id: req.params.id},{
+            $set: {
+                missionTitle: req.body.missionTitle,
+                missionLog: req.body.missionLog,
+                missionLocated: {
+                    planetsVisited: req.body.planetsVisited,
+                },
+            }
+        })
+        .then(MissionBrief => {
+            res.redirect(`/missionBrief/${MissionBrief.id}`)
+            // res.render("starshipViews/singleStarshipView", { starship });
+        })
+    },
 }

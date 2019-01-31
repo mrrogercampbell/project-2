@@ -13,9 +13,9 @@ router.post('/', missionController.create)
 
 router.get('/:id', missionController.showOne)
 
-// router.get('/:id/edit', missionController.edit)
+router.get('/:id/edit', missionController.edit)
 
-// router.put('/:id', missionController.update)
+router.put('/:id', missionController.update)
 
 router.delete('/:id', missionController.delete)
 
