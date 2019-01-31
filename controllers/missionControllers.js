@@ -43,16 +43,12 @@ module.exports = {
           })
     },
     // // //(DELETE Request) Delete a User Profile
-    // delete: (req, res) => {
-    // Starship.findOneAndRemove({_id: req.params.id})
-    //     .then( (starship) => {
-    //         // res.redirect('/')
-    //         // console.log(result)
-    //         // releaseEvents.json(result)
-    //         res.redirect(`/starship`)
-    //     })
-    // },
-    
+    delete: (req, res) => {
+        MissionBrief.findOneAndRemove({_id: req.params.id})
+            .then( (MissionBrief) => {
+                res.redirect(`/missionBrief`)
+            })
+        },  
     // // // (GET Request) Render form to update a single user
     // edit: (req, res) => {
     //     Starship.findOne({_id: req.params.id})

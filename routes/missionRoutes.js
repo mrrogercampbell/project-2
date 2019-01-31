@@ -17,7 +17,7 @@ router.get('/:id', missionController.showOne)
 
 // router.put('/:id', missionController.update)
 
-// router.get('/:id', missionController.destroy)
+router.delete('/:id', missionController.delete)
 
 
 

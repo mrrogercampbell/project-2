@@ -56,9 +56,6 @@ module.exports = {
     delete: (req, res) => {
     User.findOneAndRemove({_id: req.params.id})
         .then( (user) => {
-            // res.redirect('/')
-            // console.log(result)
-            // releaseEvents.json(result)
             res.redirect(`/user`)
         })
     },
