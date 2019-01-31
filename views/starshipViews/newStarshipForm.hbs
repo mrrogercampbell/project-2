@@ -1,7 +1,5 @@
-<h1>Please enter your information to create your Space One Federation profile!</h1>
+<h1>Please enter your new starship information and add it to the Space One Federation fleet!</h1>
 
-{{#if starship}}
-  {{#with starship}}
     <form action="/starship/" method="post">
         <label for="name">Ship Name</label>
         <input type="text" name="name" placeholder="What is your desired ship name?">
@@ -20,5 +18,3 @@
         <br>
         <input type="submit" value="submit">
     </form>
-  {{/with}}
-{{/if}}
