@@ -18,27 +18,19 @@ module.exports = {
         res.render('starshipViews/newStarshipForm')
     },
     // //(POST Request) Create new user in the database
-    // create: (req, res) => {
-    //         User.create({
-    //             name: {
-    //                 firstName:      req.body.firstName,
-    //                 middleName:     req.body.middleName,
-    //                 lastName:       req.body.lastName,
-    //                 // serialNumber: req.body.serialNumber,
-    //             },
-    //             rank:           req.body.rank,
-    //             placeOfBirth:   req.body.placeOfBirth,
-    //             yearOfBirth:    req.body.yearOfBirth,
-    //             monthOfBirth:   req.body.monthOfBirth,
-    //             dayOfBirth:     req.body.dayOfBirth,
-    //             gender:         req.body.gender,
-    //             maritalStatus:  req.body.maritalStatus,
-    //         }).then(newUser => {
-    //             console.log(`Hey Check Out the New User ${newUser}`)
-    //             // res.redirect('/success')
-    //             res.render('userViews/newUserSuccessPage')
-    //         })
-    //     },
+    create: (req, res) => {
+            Starship.create({
+                name: req.body.name,
+                registry: req.body.registry,
+                status: req.body.status,
+                dateStatus: req.body.dateStatus,
+                spacecraftClass: req.body.spacecraftClass,
+            }).then(newSpaceship => {
+                console.log(`Hey Check Out the New User ${newSpaceship}`)
+                // res.redirect('/success')
+                res.render('starshipViews/starshipIndex')
+            })
+        },
     // //(GET Request) Render newUserSuccessPage.hbs
     // success: (req, res) => {
     //     res.render('userViews/newUserSuccessPage')
