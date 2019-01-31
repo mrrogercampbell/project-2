@@ -13,9 +13,9 @@ router.get('/:id', starShipController.showOne)
 
 router.delete('/:id', starShipController.delete)
 
-router.get('/:id/edit', starShipController.editForm)
+router.get('/:id/edit', starShipController.edit)
 
-// router.put('/:id', starShipController.update)
+router.put('/:id', starShipController.update)
 
 
 

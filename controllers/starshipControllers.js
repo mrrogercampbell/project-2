@@ -55,31 +55,23 @@ module.exports = {
     },
     
     // // (GET Request) Render form to update a single user
-    editForm: (req, res) => {
+    edit: (req, res) => {
         Starship.findOne({_id: req.params.id})
         .then(starship => {
             res.render('starshipViews/updateStarshipForm.hbs', { starship });
           })
     },
     // // (PUT Request) Update resource in the database
-    // update: (req, res) => {
-    //     User.findOneAndUpdate({_id: req.params.id}, req.body)
-    //     User.create({
-    //         name: {
-    //             firstName:      req.body.firstName,
-    //             middleName:     req.body.middleName,
-    //             lastName:       req.body.lastName,
-    //             // serialNumber: req.body.serialNumber,
-    //         },
-    //         rank:           req.body.rank,
-    //         placeOfBirth:   req.body.placeOfBirth,
-    //         yearOfBirth:    req.body.yearOfBirth,
-    //         monthOfBirth:   req.body.monthOfBirth,
-    //         dayOfBirth:     req.body.dayOfBirth,
-    //         gender:         req.body.gender,
-    //         maritalStatus:  req.body.maritalStatus,})
-    //     .then(user => {
-    //         res.render("userViews/singleUserView", { user });
-    //     })
-    // }
+    update: (req, res) => {
+        Starship.findOneAndUpdate({_id: req.params.id}, req.body)
+        Starship.update({
+            name: req.body.name,
+            registry: req.body.registry,
+            status: req.body.status,
+            dateStatus: req.body.dateStatus,
+            spacecraftClass: req.body.spacecraftClass,})
+        .then(user => {
+            res.render("starshipViews/singleStarshipView", { user });
+        })
+    }
 }

@@ -73,7 +73,7 @@ module.exports = {
     // (PUT Request) Update resource in the database
     update: (req, res) => {
         User.findOneAndUpdate({_id: req.params.id}, req.body)
-        User.create({
+        User.update({
             name: {
                 firstName:      req.body.firstName,
                 middleName:     req.body.middleName,
