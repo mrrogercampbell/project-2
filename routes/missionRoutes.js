@@ -7,9 +7,9 @@ const missionController = require('../controllers/missionControllers')
 
 router.get('/', missionController.index)
 
-// router.get('/new', missionController.new)
+router.get('/new', missionController.new)
 
-// router.post('/', missionController.create)
+router.post('/', missionController.create)
 
 // router.get('/:id', missionController.show)
 

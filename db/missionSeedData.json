@@ -4,20 +4,20 @@
         "missionLocated": {
             "planetsVisited": "Earth"
         },
-        "missionNotes": "Was a great mission!!"
+        "missionLog": "Was a great mission!!"
     },
     {
         "missionTitle": "Journey to Mars",
         "missionLocated": {
             "planetsVisited": "Mars"
         },
-        "missionNotes": "Was a great mission!!" 
+        "missionLog": "Was a great mission!!" 
     },
     {
         "missionTitle": "Journey to Jupiter",
         "missionLocated": {
             "planetsVisited": "Jupiter"
         },
-        "missionNotes": "Was a great mission!!"
+        "missionLog": "Was a great mission!!"
     }
 ]

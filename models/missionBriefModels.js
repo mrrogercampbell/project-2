@@ -1,9 +1,9 @@
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
-const MissionBrief = new mongoose.Schema({
+const MissionBrief = Schema({
     missionTitle: String,
-    missionNotes: String,
+    missionLog: String,
     missionLocated: {
         planetsVisited: String,
     },

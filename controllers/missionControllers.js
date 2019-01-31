@@ -14,23 +14,22 @@ module.exports = {
           })
     },
     // //(GET Request) Render newUserform.hbs
-    // new: (req, res) => {
-    //     res.render('starshipViews/newStarshipForm')
-    // },
+    new: (req, res) => {
+        res.render('missionViews/newMissionBriefForm')
+    },
     // // //(POST Request) Create new user in the database
-    // create: (req, res) => {
-    //         Starship.create({
-    //             name: req.body.name,
-    //             registry: req.body.registry,
-    //             status: req.body.status,
-    //             dateStatus: req.body.dateStatus,
-    //             spacecraftClass: req.body.spacecraftClass,
-    //         }).then(newSpaceship => {
-    //             console.log(`Hey Check Out the New User ${newSpaceship}`)
-    //             // res.redirect('/success')
-    //             res.redirect(`/starship/${newSpaceship.id}`)
-    //         })
-    //     },
+    create: (req, res) => {
+        MissionBrief.create({
+            missionTitle: req.body.missionTitle,
+            missionLog: req.body.missionLog,
+            missionLocated: {
+                planetsVisited: req.body.planetsVisited,
+            },
+            }).then(MissionBrief => {
+                // res.redirect('/success')
+                res.redirect(`/missionBrief/${MissionBrief.id}`)
+            })
+        },
     // // //(GET Request) Render newUserSuccessPage.hbs
     // // When you create this have it forward to the newly created starships single view
     // // success: (req, res) => {
