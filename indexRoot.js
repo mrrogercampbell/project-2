@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const app = express()
 const cors = require('cors')
 
-require(Bootstrap)
 app.use(methodOverride('_method'))
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}))
