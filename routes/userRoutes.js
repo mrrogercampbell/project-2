@@ -17,7 +17,7 @@ router.delete('/:id', userController.delete)
 
 router.get('/:id/edit', userController.edit)
 
-// router.put('/:id', userController.update)
+router.put('/:id', userController.update)
 
 
 

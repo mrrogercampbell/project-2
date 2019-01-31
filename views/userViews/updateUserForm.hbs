@@ -2,7 +2,7 @@
 
 {{#if user}}
   {{#with user}}
-    <form action="/user/#" method="POST">
+     <form action="/user/{{id}}?_method=PUT" method="POST">
         <label for="firstName">{{name.firstName}}</label>
         <input type="text" name="firstName" placeholder="What is your first name?">
         <br>

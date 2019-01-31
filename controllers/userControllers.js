@@ -81,15 +81,13 @@ module.exports = {
             res.render('userviews/updateUserForm', { user });
           })
     },
-    // update: () => {
-    //     (req, res) => {
-    //         // (PUT Request) Update resource in the database
-    //         UserSchema.findOneAndUpdate({_id: req.params.id}, req.body)
-    //         .then(user => {
-    //             res.render("userViews/singleUserView", { user });
-    //         })
-    //     }
-    // },
+    // (PUT Request) Update resource in the database
+    update: (req, res) => {
+        User.findOneAndUpdate({_id: req.params.id}, req.body)
+        .then(user => {
+            res.render("userViews/singleUserView", { user });
+        })
+    },
     
     // show: () => {
     //     //(GET Request) Show a single user
