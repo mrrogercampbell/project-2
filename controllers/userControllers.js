@@ -86,7 +86,8 @@ module.exports = {
             monthOfBirth:   req.body.monthOfBirth,
             dayOfBirth:     req.body.dayOfBirth,
             gender:         req.body.gender,
-            maritalStatus:  req.body.maritalStatus,})
+            maritalStatus:  req.body.maritalStatus
+        })
         .then(user => {
             res.render("userViews/singleUserView", { user });
         })
