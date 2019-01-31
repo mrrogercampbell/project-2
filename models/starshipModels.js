@@ -1,24 +1,27 @@
-// const mongoose = require('mongoose')
+const mongoose = require('../db/connection')
+const Schema = mongoose.Schema
 
-// const StarshipSchema = new mongoose.Schema({
-// 	name: String,
-// 	registry: String,
-// 	status: String,
-// 	dateStatus: String,
-// 	spacecraftClass: String,
-// 	rankingOfficers:{
-//         // This info should come from the user model
-// 		name: {
-//             firstName: String,
-//             lastName: String,
-//         },
-//         ranks: String,
-//     },
-//     photos: String,
-//     // This info should come from the user model
-// })
+const Starship = new Schema({
+	name: String,
+	registry: String,
+	status: String,
+	dateStatus: String,
+	spacecraftClass: {
+        name: String,
+    }
+    // photos: String,
+	// rankingOfficers:{
+    //     // This info should come from the user model
+	// 	name: {
+    //         firstName: String,
+    //         lastName: String,
+    //     },
+    //     ranks: String,
+    // },
+    // This info should come from the user model
+})
 
-// mongoose.model('Starship', StarshipSchema)
+mongoose.model('starshipModels', Starship)
 
 
-// module.exports = mongoose
+module.exports = mongoose

@@ -7,17 +7,17 @@ const starShipController = require('../controllers/userControllers')
 
 router.get('/', starShipController.index)
 
-router.get('/new', starShipController.new)
+// router.get('/new', starShipController.new)
 
-router.post('/', starShipController.create)
+// router.post('/', starShipController.create)
 
-router.get('/:id', starShipController.show)
+// router.get('/:id', starShipController.show)
 
-router.get('/:id/edit', starShipController.edit)
+// router.get('/:id/edit', starShipController.edit)
 
-router.put('/:id', starShipController.update)
+// router.put('/:id', starShipController.update)
 
-router.get('/:id', starShipController.destroy)
+// router.get('/:id', starShipController.destroy)
 
 
 

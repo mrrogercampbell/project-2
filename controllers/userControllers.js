@@ -1,30 +1,19 @@
-// const mongoose = require('mongoose')
-// const mongoose = require('../db/connection')
 const mongoose = require('../models/userModels')
-// const User = require('../models/userModels')
 const User = mongoose.model('userModels')
 
-//Need to create DB dir before bring this online
 mongoose.connect('mongodb://localhost/sof')
 
 mongoose.Promise = Promise
 
 
 
-// const UserSchema = mongoose.model('User', UserSchema)
-
-
 module.exports = {
     // (GET Request) List all Users
     index: (req, res) => {
         User.find({})
-        // .sort({ createdAt: -1 })
-        // .populate('title')
-        // .populate('author')
         .then(users => {
             res.render("userViews/usersIndex", { users });
           })
-        // .catch(err => console.log(err))
     },
     //(GET Request) Render newUserform.hbs
     new: (req, res) => {
@@ -102,18 +91,4 @@ module.exports = {
             res.render("userViews/singleUserView", { user });
         })
     },
-    
-    // show: () => {
-    //     //(GET Request) Show a single user
-    //     (req, res) => {
-    //         UserSchema.findOne({name: req.params.name}).then((results) => {
-    //             console.log(results)
-    //             res.send(results)
-    //         })
-    //     }
-    // },
-
-
-    // 
-
 }

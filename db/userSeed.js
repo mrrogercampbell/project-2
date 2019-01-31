@@ -1,5 +1,5 @@
 const mongoose = require('../models/userModels')
-const seeds    = require('./seedData')
+const seeds = require('./userSeedData')
 
 const User = mongoose.model('userModels')
 
@@ -16,3 +16,4 @@ User.remove({}).then(_ => {
     console.log(err)
   })
 })
+

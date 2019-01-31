@@ -1,0 +1,35 @@
+[
+    {
+        "name":  "USS Enterprise",
+        "registry":  "NCC-1701-D",
+        "status":  "Destroyed",
+        "dateStatus":  "2371",
+        "spacecraftClass": {
+            "name": "Galaxy class"
+        }
+    },
+    {
+        "name":  "USS Defiant",
+        "status":  "Active",
+        "dateStatus":  "2375",
+        "spacecraftClass": {
+            "name": "Defiant class"
+        },
+        "owner":{
+            "name": "United Federation of Planets"
+        }  
+    },
+    {
+        "name":  "USS Voyager",
+        "registry":  "NCC-74656",
+        "status":  "Active",
+        "dateStatus":  "2378",
+        "spacecraftClass":{
+            "name": "Intrepid class"
+        },
+        "owner":{
+            "name": "United Federation of Planets"
+        }  
+    }
+]
+
