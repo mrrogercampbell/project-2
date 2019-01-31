@@ -1,0 +1,17 @@
+{{#if MissionBrief}}
+  {{#with MissionBrief}}
+  <div>
+    <h1>{{missionTitle}}</h1>
+    <p>{{missionLog}}</p>
+    <p>{{missionLocated.planetsVisited}}</p>
+  </div>
+  <form action="/missionBrief/{{id}}/edit" method="Get">
+    <input type="submit" value="Update Mission Log">
+  </form>
+    <form action="/missionBrief/{{id}}?_method=DELETE" method="POST">
+      <input type="submit" value="Delete This Mission Log">
+    </form>
+  {{/with}}
+{{/if}}
+
+

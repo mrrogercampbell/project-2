@@ -11,7 +11,7 @@ router.get('/new', missionController.new)
 
 router.post('/', missionController.create)
 
-// router.get('/:id', missionController.show)
+router.get('/:id', missionController.showOne)
 
 // router.get('/:id/edit', missionController.edit)
 

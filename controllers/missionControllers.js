@@ -36,12 +36,12 @@ module.exports = {
     // //     res.render('userViews/newUserSuccessPage')
     // // },
     // // // (GET Request) Render a View to Show one User Profile
-    // showOne: (req, res)=> {
-    //     Starship.findOne({_id: req.params.id})
-    //     .then(starship => {
-    //         res.render("starshipViews/singleStarshipView", { starship });
-    //       })
-    // },
+    showOne: (req, res)=> {
+        MissionBrief.findOne({_id: req.params.id})
+        .then(MissionBrief => {
+            res.render("missionViews/singleMissionBriefView", { MissionBrief });
+          })
+    },
     // // //(DELETE Request) Delete a User Profile
     // delete: (req, res) => {
     // Starship.findOneAndRemove({_id: req.params.id})
