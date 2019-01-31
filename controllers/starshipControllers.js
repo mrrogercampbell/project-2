@@ -32,6 +32,7 @@ module.exports = {
             })
         },
     // //(GET Request) Render newUserSuccessPage.hbs
+    // When you create this have it forward to the newly created starships single view
     // success: (req, res) => {
     //     res.render('userViews/newUserSuccessPage')
     // },
@@ -43,15 +44,15 @@ module.exports = {
           })
     },
     // //(DELETE Request) Delete a User Profile
-    // delete: (req, res) => {
-    // User.findOneAndRemove({_id: req.params.id})
-    //     .then( (user) => {
-    //         // res.redirect('/')
-    //         // console.log(result)
-    //         // releaseEvents.json(result)
-    //         res.render('userViews/newUserSuccessPage', { _id: req.params.id})
-    //     })
-    // },
+    delete: (req, res) => {
+    Starship.findOneAndRemove({_id: req.params.id})
+        .then( (user) => {
+            // res.redirect('/')
+            // console.log(result)
+            // releaseEvents.json(result)
+            res.render('starshipViews/DeleteStarshipSuccessPage', { _id: req.params.id})
+        })
+    },
     
     // // (GET Request) Render form to update a single user
     // edit: (req, res) => {

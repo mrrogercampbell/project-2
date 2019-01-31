@@ -11,11 +11,12 @@ router.post('/', starShipController.create)
 
 router.get('/:id', starShipController.showOne)
 
+router.delete('/:id', starShipController.delete)
+
 // router.get('/:id/edit', starShipController.edit)
 
 // router.put('/:id', starShipController.update)
 
-// router.get('/:id', starShipController.destroy)
 
 
 
