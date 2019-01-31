@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const starShipController = require('../controllers/userControllers')
+const starShipController = require('../controllers/starshipControllers')
 //Need to create DB dir before bring this online
 // const mongoose = require('../db/connection')
 
 
-// router.get('/', starShipController.index)
+router.get('/', starShipController.index)
 
 router.get('/new', starShipController.new)
 

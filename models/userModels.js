@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-// const mongoose = require('../models/appModel')
-=======
->>>>>>> master
 const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
@@ -24,12 +20,6 @@ const User = new Schema({
 })
 
 mongoose.model('userModels', User)
-<<<<<<< HEAD
-
-module.exports = mongoose
-// module.exports = mongoose.model('userModels', User)
-=======
 
 module.exports = mongoose
 
->>>>>>> master

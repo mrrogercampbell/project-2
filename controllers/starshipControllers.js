@@ -1,4 +1,4 @@
-const mongoose = require('../models/userModels')
+const mongoose = require('../models/starshipModels')
 const Starship = mongoose.model('starshipModels')
 
 mongoose.connect('mongodb://localhost/sof')
@@ -9,12 +9,12 @@ mongoose.Promise = Promise
 
 module.exports = {
     // (GET Request) List all Users
-    // index: (req, res) => {
-    //     Starship.find({})
-    //     .then(starships => {
-    //         res.render("starshipViews/starshipIndex", { starships });
-    //       })
-    // },
+    index: (req, res) => {
+        Starship.find({})
+        .then(starships => {
+            res.render("starshipViews/starshipIndex", { starships });
+          })
+    },
     //(GET Request) Render newUserform.hbs
     new: (req, res) => {
         res.render('starshipViews/newStarshipForm')
