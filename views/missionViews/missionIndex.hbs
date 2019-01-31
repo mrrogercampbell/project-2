@@ -1,0 +1,11 @@
+<h1>Top Secert List of the All Space One Federation Missions</h1>
+
+{{#if missionBrief}}
+  <ul>
+  {{#each missionBrief}}
+    <h1><a href="/starship/{{id}}">{{missionTitle}}</a></h1>
+    <p>{{missionNotes}}</p>
+    <p>{{missionLocated.planetsVisited}}</p>
+  {{/each}}
+  </ul>
+{{/if}}

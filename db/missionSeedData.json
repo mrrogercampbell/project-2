@@ -1,17 +1,20 @@
 [
     {
+        "missionTitle": "Journey to Earth",
         "missionLocated": {
             "planetsVisited": "Earth"
         },
         "missionNotes": "Was a great mission!!"
     },
     {
+        "missionTitle": "Journey to Mars",
         "missionLocated": {
             "planetsVisited": "Mars"
         },
         "missionNotes": "Was a great mission!!" 
     },
     {
+        "missionTitle": "Journey to Jupiter",
         "missionLocated": {
             "planetsVisited": "Jupiter"
         },
