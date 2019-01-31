@@ -1,0 +1,20 @@
+[
+    {
+        "missionLocated": {
+            "planetsVisited": "Earth"
+        },
+        "missionNotes": "Was a great mission!!"
+    },
+    {
+        "missionLocated": {
+            "planetsVisited": "Mars"
+        },
+        "missionNotes": "Was a great mission!!" 
+    },
+    {
+        "missionLocated": {
+            "planetsVisited": "Jupiter"
+        },
+        "missionNotes": "Was a great mission!!"
+    }
+]
