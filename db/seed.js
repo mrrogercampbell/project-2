@@ -1,10 +1,11 @@
-const mongoose = require('../models/appModel')
+const mongooseUser = require('../models/userModels')
+const mongooseStarship = require('../models/starshipModels')
 // const seeds = require('./seedData')
 const userSeeds = require('./userSeedData')
 const starshipSeeds = require('./starshipSeedData')
 
-const User = mongoose.model('userModels', User)
-const Starship = mongoose.model('starshipModels', Starship)
+const User = mongooseUser.model('userModels', User)
+const Starship = mongooseStarship.model('starshipModels', Starship)
 
 mongoose.Promise = Promise
 

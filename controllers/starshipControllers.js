@@ -9,16 +9,16 @@ mongoose.Promise = Promise
 
 module.exports = {
     // (GET Request) List all Users
-    index: (req, res) => {
-        Starship.find({})
-        .then(starships => {
-            res.render("userViews/usersIndex", { starships });
-          })
-    },
-    // //(GET Request) Render newUserform.hbs
-    // new: (req, res) => {
-    //     res.render('userViews/newUserForm')
+    // index: (req, res) => {
+    //     Starship.find({})
+    //     .then(starships => {
+    //         res.render("starshipViews/starshipIndex", { starships });
+    //       })
     // },
+    //(GET Request) Render newUserform.hbs
+    new: (req, res) => {
+        res.render('starshipViews/newStarshipForm')
+    },
     // //(POST Request) Create new user in the database
     // create: (req, res) => {
     //         User.create({

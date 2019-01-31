@@ -5,9 +5,9 @@ const starShipController = require('../controllers/userControllers')
 // const mongoose = require('../db/connection')
 
 
-router.get('/', starShipController.index)
+// router.get('/', starShipController.index)
 
-// router.get('/new', starShipController.new)
+router.get('/new', starShipController.new)
 
 // router.post('/', starShipController.create)
 
