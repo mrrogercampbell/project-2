@@ -13,7 +13,9 @@
     <p>{{maritalStatus}}</p>
     <p>{{serialNumber}}</p>
   </div>
-  <form action="route to update view" method="Get"></form>
+  <form action="/user/{{id}}/edit" method="Get">
+    <input type="submit" value="Update User Profile">
+  </form>
     <form action="/user/{{id}}?_method=DELETE" method="POST">
       <input type="submit" value="Delete This User">
     </form>

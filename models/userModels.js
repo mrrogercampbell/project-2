@@ -12,6 +12,7 @@ const User = new Schema({
     placeOfBirth: String,
     yearOfBirth: String,
     monthOfBirth: String,
+    dayOfBirth: Number,
     dayOfBirth: String,
     gender: String,
     maritalStatus: String,

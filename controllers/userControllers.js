@@ -73,6 +73,14 @@ module.exports = {
             res.render('userViews/newUserSuccessPage', { _id: req.params.id})
         })
     },
+    
+    // (GET Request) Render form to update a single user
+    edit: (req, res) => {
+        User.findOne({_id: req.params.id})
+        .then(user => {
+            res.render('userviews/updateUserForm', { user });
+          })
+    },
     // update: () => {
     //     (req, res) => {
     //         // (PUT Request) Update resource in the database
@@ -82,13 +90,7 @@ module.exports = {
     //         })
     //     }
     // },
-    // (PUT Request) Will allow users to edit their User Profile    
-    // edit: () => {
-    //     // (GET Request) Render form to update a single user
-    //     (req, res) => {
-           
-    //     }
-    // },
+    
     // show: () => {
     //     //(GET Request) Show a single user
     //     (req, res) => {
