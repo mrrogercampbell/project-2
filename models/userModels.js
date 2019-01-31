@@ -1,4 +1,4 @@
-const mongoose = require('../db/connection')
+const mongoose = require('../models/appModel')
 const Schema = mongoose.Schema
 
 const User = new Schema({
@@ -19,6 +19,7 @@ const User = new Schema({
     serialNumber: String,
 })
 
-mongoose.model('userModels', User)
+// mongoose.model('userModels', User)
 
-module.exports = mongoose
+// module.exports = mongoose
+module.exports = mongoose.model('userModels', User)
