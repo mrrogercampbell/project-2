@@ -63,16 +63,25 @@ module.exports = {
             res.render("userViews/singleUserView", { user });
           })
     },
-        //(DELETE Request) Delete a User Profile
-        delete: (req, res) => {
-        User.findOneAndRemove({_id: req.params.id})
-            .then( (user) => {
-                // res.redirect('/')
-                // console.log(result)
-                // releaseEvents.json(result)
-                res.render('userViews/newUserSuccessPage', { _id: req.params.id})
-            })
-        }
+    //(DELETE Request) Delete a User Profile
+    delete: (req, res) => {
+    User.findOneAndRemove({_id: req.params.id})
+        .then( (user) => {
+            // res.redirect('/')
+            // console.log(result)
+            // releaseEvents.json(result)
+            res.render('userViews/newUserSuccessPage', { _id: req.params.id})
+        })
+    },
+    // update: () => {
+    //     (req, res) => {
+    //         // (PUT Request) Update resource in the database
+    //         UserSchema.findOneAndUpdate({_id: req.params.id}, req.body)
+    //         .then(user => {
+    //             res.render("userViews/singleUserView", { user });
+    //         })
+    //     }
+    // },
     // (PUT Request) Will allow users to edit their User Profile    
     // edit: () => {
     //     // (GET Request) Render form to update a single user
@@ -91,13 +100,6 @@ module.exports = {
     // },
 
 
-    // update: () => {
-    //     (req, res) => {
-    //         // (PUT Request) Update resource in the database
-    //         UserSchema.findOneAndUpdate({title: req.params.title}, req.body).then(result => {
-    //             res.json(result)
-    //         })
-    //     }
-    // },
+    // 
 
 }
