@@ -62,17 +62,18 @@ module.exports = {
           })
     },
     // // (PUT Request) Update resource in the database
-    update: (req, res) => {
-        Starship.findOneAndUpdate({_id: req.params.id}, req.body)
-        Starship.update({
-            name: req.body.name,
-            registry: req.body.registry,
-            status: req.body.status,
-            dateStatus: req.body.dateStatus,
-            spacecraftClass: req.body.spacecraftClass,
+    update: (req,res) => {
+        Starship.findOneAndUpdate({_id: req.params.id},{
+            $set: {
+                name: req.body.name,
+                registry: req.body.registry,
+                status: req.body.status,
+                dateStatus: req.body.dateStatus,
+                spacecraftClass: req.body.spacecraftClass,
+            }
         })
         .then(user => {
             res.render("starshipViews/singleStarshipView", { user });
         })
-    }
+    },
 }
