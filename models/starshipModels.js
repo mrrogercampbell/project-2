@@ -1,5 +1,8 @@
 const mongoose = require('../db/connection')
+<<<<<<< HEAD
 // const mongoose = require('../models/appModel')
+=======
+>>>>>>> master
 const Schema = mongoose.Schema
 
 const Starship = new Schema({
@@ -24,4 +27,7 @@ mongoose.model('starshipModels', Starship)
 
 
 module.exports = mongoose
+<<<<<<< HEAD
 // module.exports = mongoose.model('starshipModels', Starship)
+=======
+>>>>>>> master
