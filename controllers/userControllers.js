@@ -90,7 +90,7 @@ module.exports = {
             }
         })
         .then(user => {
-            res.render("userViews/singleUserView", { user })
+          res.redirect(`/user/${user.id}`)
         })
     },
 }
