@@ -1,4 +1,4 @@
-const mongoose = require('../models/userModels')
+const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
 const Starship = new Schema({
@@ -8,7 +8,7 @@ const Starship = new Schema({
 	dateStatus: String,
 	spacecraftClass: {
         name: String,
-    },
+    }
     // photos: String,
 	// rankingOfficers:{
     //     // This info should come from the user model

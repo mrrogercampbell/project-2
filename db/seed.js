@@ -4,7 +4,7 @@ const userSeeds = require('./userSeedData')
 const starshipSeeds = require('./starshipSeedData')
 
 const User = mongoose.model('userModels')
-const Starship = mongoose.model('starshipModels')
+const Starship = mongoose.model('starshipModels',)
 
 mongoose.Promise = Promise
 
