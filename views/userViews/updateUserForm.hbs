@@ -3,35 +3,35 @@
 {{#if user}}
   {{#with user}}
      <form action="/user/{{id}}?_method=PUT" method="POST">
-        <label for="firstName">{{name.firstName}}</label>
-        <input type="text" name="firstName" placeholder="What is your first name?">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" placeholder="What is your first name?" value="{{name.firstName}}">
         <br>
-        <label for="middleName">{{name.middleName}}</label>
-        <input type="text" name="middleName" placeholder="What is your middle name?">
+        <label for="middleName">Middle Name</label>
+        <input type="text" name="middleName" placeholder="What is your middle name?" value="{{middleName}}">
         <br>
-        <label for="lastName">{{name.lastName}}</label>
-        <input type="text" name="lastName" placeholder="What is your last name?">
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" placeholder="What is your last name?" value="{{name.lastName}}">
         <br>
-        <label for="rank">{{rank}}</label>
-        <input type="text" name="rank" placeholder="What is your desiered rank?">
+        <label for="rank">Rank</label>
+        <input type="text" name="rank" placeholder="What is your desiered rank?" value="{{rank}}">
         <br>
-        <label for="placeOfBirth">{{placeOfBirth}}</label>
-        <input type="text" name="placeOfBirth" placeholder="City, State, Country, Planet?">
+        <label for="placeOfBirth">Place Of Birth</label>
+        <input type="text" name="placeOfBirth" placeholder="City, State, Country, Planet?" value="{{placeOfBirth}}">
         <br>
-        <label for="yearOfBirth">{{yearOfBirth}}</label>
-        <input type="text" name="yearOfBirth" placeholder="What year were you born?">
+        <label for="yearOfBirth">Birth Year</label>
+        <input type="text" name="yearOfBirth" placeholder="What year were you born?" value="{{yearOfBirth}}">
         <br>
-        <label for="monthOfBirth">{{monthOfBirth}}</label>
-        <input type="text" name="monthOfBirth" placeholder="What month were you born?">
+        <label for="monthOfBirth">Birth Month</label>
+        <input type="text" name="monthOfBirth" placeholder="What month were you born?" value="{{monthOfBirth}}">
         <br>
-        <label for="gender">{{dayOfBirth}}</label>
-        <input type="text" name="dayOfBirth" placeholder="What day were you born on??">
+        <label for="gender">Day of Birth</label>
+        <input type="text" name="dayOfBirth" placeholder="What day were you born on??" value="{{dayOfBirth}}">
         <br>
-        <label for="gender">{{gender}}</label>
-        <input type="text" name="gender" placeholder="What gender do you identify with?">
+        <label for="gender">Gender</label>
+        <input type="text" name="gender" placeholder="What gender do you identify with?" value="{{gender}}">
         <br>
-        <label for="maritalStatus">{{maritalStatus}}</label>
-        <input type="text" name="maritalStatus" placeholder="What is your Marital Status?">
+        <label for="maritalStatus">Marital Status</label>
+        <input type="text" name="maritalStatus" placeholder="What is your Marital Status?" value="{{maritalStatus}}">
         {{!-- <br>
         <label for="serialNumber">{{serialNumber}}</label>
         <input type="text" name="serialNumber" placeholder="?"> --}} 

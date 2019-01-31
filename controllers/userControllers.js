@@ -84,6 +84,20 @@ module.exports = {
     // (PUT Request) Update resource in the database
     update: (req, res) => {
         User.findOneAndUpdate({_id: req.params.id}, req.body)
+        User.create({
+            name: {
+                firstName:      req.body.firstName,
+                middleName:     req.body.middleName,
+                lastName:       req.body.lastName,
+                // serialNumber: req.body.serialNumber,
+            },
+            rank:           req.body.rank,
+            placeOfBirth:   req.body.placeOfBirth,
+            yearOfBirth:    req.body.yearOfBirth,
+            monthOfBirth:   req.body.monthOfBirth,
+            dayOfBirth:     req.body.dayOfBirth,
+            gender:         req.body.gender,
+            maritalStatus:  req.body.maritalStatus,})
         .then(user => {
             res.render("userViews/singleUserView", { user });
         })
