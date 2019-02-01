@@ -21,4 +21,7 @@ const routes = require('./routes/appRoutes')
 app.use('/', routes)
 
 
-app.listen(8080, () => console.log('We in this ish...on port 8080...'))
+app.set('port', process.env.PORT || 3000)
+
+app.listen(app.get('port'), () => console.log(`server is running on PORT ${app.get('port')}`))
+// app.listen(8080, () => console.log('We in this ish...on port 8080...'))
