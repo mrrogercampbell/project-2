@@ -1,5 +1,20 @@
 [
     {
+        "photo": "https://i.ibb.co/TTkwCqq/MeHijpg.jpg",
+        "name": {
+            "firstName": "Roger",
+            "lastName": "Campbell II"
+        },
+        "rank": "Admiral",
+        "placeOfBirth": "Philadelphia, Pennsylvania, USA, Earth",
+        "yearOfBirth": "1990",
+        "monthOfBirth": "05",
+        "dayOfBirth": "27",
+        "gender": "Male",
+        "maritalStatus": "Single",
+        "serialNumber": "SP-954-215" 
+    },
+    {
         "photo": "https://vignette.wikia.nocookie.net/memoryalpha/images/f/fc/Jean-Luc_Picard%2C_2364.jpg/revision/latest/scale-to-width-down/700?cb=20180906020126&path-prefix=en",
         "name": {
             "firstName": "Jean-Luc",

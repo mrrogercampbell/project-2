@@ -1,16 +1,42 @@
 body {
     /* background-image: linear-gradient(to right top, #2c3531, #2c403b, #294c47, #225855, #116466); */
-    background: #2C3531;
-    color: red;
+    /* background-image: radial-gradient(circle, #eae7dc, #c2c3b8, #9c9f96, #787d76, #565d57, #515a52, #4c584c, #485547, #646d55, #878464, #ae9b76, #d9b08c); */
+    background-image: radial-gradient(circle, #eae7dc, #c2c3b8, #9c9f96, #787d76, #565d57, #4b584b, #42523e, #3a4c30, #575a26, #81621d, #b4632a, #e85a4f);
 }
 
-h1 {
-    color:red;
+.box-border {
+    /* border: black 5px solid; */
+    background-color: rgba(0, 0, 0, .1);
     
 }
 
-/* #2C3531
+img{
+    max-width: 40vh;
+    height: auto;
+}
+
+
+
+/* 
+#2C3531
 #116466
 #D9B08C
 #FFCB9A
-#D1E8E2 */
+#D1E8E2 
+*/
+
+/* 
+#EAE7DC
+#D8C3A5
+#8E8D8A
+#E98074
+#E85A4F
+*/
+
+/* 
+#5680E9
+#84CEEB
+#5AB9EA
+#C1C8E4
+#8860D0 
+*/

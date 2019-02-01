@@ -1,12 +1,12 @@
-<main>
   <h1>Top Secert List of the Entire Space One Federation</h1>
-
+<div class="box-border">
   {{#if users}}
     <ul>
     {{#each users}}
       <h1><a href="/user/{{id}}">{{name.firstName}} {{name.middleName}} {{name.lastName}}</a></h1>
       {{!-- How would I get the image to show --}}
       {{!-- <img src="#" alt="Photo of User"> --}}
+      <img src="{{photo}}" alt="">
       <p>Rank: {{rank}}</p>
       <p>Place of Birth: {{placeOfBirth}}</p>
       <p>Year Born: {{yearOfBirth}}</p>
@@ -18,4 +18,4 @@
     {{/each}}
     </ul>
   {{/if}}
-</main>
+</div>
