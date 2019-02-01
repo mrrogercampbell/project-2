@@ -1,10 +1,12 @@
 body {
     /* background-image: linear-gradient(to right top, #2c3531, #2c403b, #294c47, #225855, #116466); */
-    background-color: #2C3531;
+    background: #2C3531;
+    color: red;
 }
 
 h1 {
     color:red;
+    
 }
 
 /* #2C3531
