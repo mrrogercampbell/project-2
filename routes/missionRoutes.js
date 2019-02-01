@@ -1,9 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const missionController = require('../controllers/missionControllers')
-//Need to create DB dir before bring this online
-// const mongoose = require('../db/connection')
-
 
 router.get('/', missionController.index)
 
