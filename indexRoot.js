@@ -9,6 +9,7 @@ app.use(methodOverride('_method'))
 app.use(cors())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+app.use(express.static("public/css"))
 
 app.set('view engine', 'hbs')
 

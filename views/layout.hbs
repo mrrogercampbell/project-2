@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{!-- <link rel="stylesheet" href="../public/style.css"> --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>SOF</title>
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-        <a class="user-link nav-item nav-link active" href="/user/">Show All Users <span class="sr-only">(current)</span></a>
-        <a class="user-link nav-item nav-link active" href="/user/new">Create User <span class="sr-only">(current)</span></a>
-        <a class="starship-link nav-item nav-link active" href="/starship">Show All Starships <span class="sr-only">(current)</span></a>
-        <a class="starship-link nav-item nav-link active" href="/starship/new">Create Starship<span class="sr-only">(current)</span></a>
-        <a class="mission-brief-link nav-item nav-link active" href="/missionBrief/">Show All Mission Briefs<span class="sr-only">(current)</span></a>
-        <a class="mission-brief-link nav-item nav-link active" href="/missionBrief/new">Create New Mission Brief<span class="sr-only">(current)</span></a>
+<body>  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <a class="user-link nav-item nav-link active" href="/user/">Show All Users <span class="sr-only">(current)</span></a>
+            <a class="user-link nav-item nav-link active" href="/user/new">Create User <span class="sr-only">(current)</span></a>
+            <a class="starship-link nav-item nav-link active" href="/starship">Show All Starships <span class="sr-only">(current)</span></a>
+            <a class="starship-link nav-item nav-link active" href="/starship/new">Create Starship<span class="sr-only">(current)</span></a>
+            <a class="mission-brief-link nav-item nav-link active" href="/missionBrief/">Show All Mission Briefs<span class="sr-only">(current)</span></a>
+            <a class="mission-brief-link nav-item nav-link active" href="/missionBrief/new">Create New Mission Brief<span class="sr-only">(current)</span></a>
+            </div>
         </div>
-    </div>
-</nav>
-    {{{body}}}
+    </nav>
+    <main class="container main-tag">
+        {{{body}}}
+    </main>
 
     {{!-- <script src="../script.js"></script> --}}
 </body>

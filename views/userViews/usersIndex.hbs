@@ -1,19 +1,21 @@
-<h1>Top Secert List of the Entire Space One Federation</h1>
+<main>
+  <h1>Top Secert List of the Entire Space One Federation</h1>
 
-{{#if users}}
-  <ul>
-  {{#each users}}
-    <h1><a href="/user/{{id}}">{{name.firstName}} {{name.middleName}} {{name.lastName}}</a></h1>
-    {{!-- How would I get the image to show --}}
-    {{!-- <img src="#" alt="Photo of User"> --}}
-    <p>Rank: {{rank}}</p>
-    <p>Place of Birth: {{placeOfBirth}}</p>
-    <p>Year Born: {{yearOfBirth}}</p>
-    <p>Month Born In: {{monthOfBirth}}</p>
-    <p>Day Born: {{dayOfBirth}}</p>
-    <p>Gender: {{gender}}</p>
-    <p>Marital Status: {{maritalStatus}}</p>
-    <p>Serial Number: {{serialNumber}}</p>
-  {{/each}}
-  </ul>
-{{/if}}
+  {{#if users}}
+    <ul>
+    {{#each users}}
+      <h1><a href="/user/{{id}}">{{name.firstName}} {{name.middleName}} {{name.lastName}}</a></h1>
+      {{!-- How would I get the image to show --}}
+      {{!-- <img src="#" alt="Photo of User"> --}}
+      <p>Rank: {{rank}}</p>
+      <p>Place of Birth: {{placeOfBirth}}</p>
+      <p>Year Born: {{yearOfBirth}}</p>
+      <p>Month Born In: {{monthOfBirth}}</p>
+      <p>Day Born: {{dayOfBirth}}</p>
+      <p>Gender: {{gender}}</p>
+      <p>Marital Status: {{maritalStatus}}</p>
+      <p>Serial Number: {{serialNumber}}</p>
+    {{/each}}
+    </ul>
+  {{/if}}
+</main>
