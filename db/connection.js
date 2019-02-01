@@ -4,13 +4,20 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = Promise
 
-const mongoUri = 'mongodb://localhost/sof'
+
+
+if (process.env.NODE_ENV == "production") {
+  mongoose.connect(process.env.MLAB_URL)
+} else {
+  mongoose.connect("mongodb://localhost/sof")
+}
 
 // connect to the database, with the imported mongoose instance
-mongoose
-  .connect(mongoUri, {useNewUrlParser: true})
-  .then(connection => console.log(`Connection established to db`))
-  .catch(connectionError => console.log('Connection failed!', connectionError))
+// const mongoUri = 'mongodb://localhost/sof'
+// mongoose
+//   .connect(mongoUri, {useNewUrlParser: true})
+//   .then(connection => console.log(`Connection established to db`))
+//   .catch(connectionError => console.log('Connection failed!', connectionError))
 
 // now, our mongoose instance has a configured connection to our local db, in addition
 // to its model configuration

@@ -1,7 +1,8 @@
 body {
     /* background-image: linear-gradient(to right top, #2c3531, #2c403b, #294c47, #225855, #116466); */
     /* background-image: radial-gradient(circle, #eae7dc, #c2c3b8, #9c9f96, #787d76, #565d57, #515a52, #4c584c, #485547, #646d55, #878464, #ae9b76, #d9b08c); */
-    background-image: radial-gradient(circle, #eae7dc, #c2c3b8, #9c9f96, #787d76, #565d57, #4b584b, #42523e, #3a4c30, #575a26, #81621d, #b4632a, #e85a4f);
+    /* background-image: radial-gradient(circle, #eae7dc, #c2c3b8, #9c9f96, #787d76, #565d57, #4b584b, #42523e, #3a4c30, #575a26, #81621d, #b4632a, #e85a4f); */
+    background-image: radial-gradient(circle, #eae7dc, #c2c3b8, #9c9f96, #787d76, #565d57, #4a514c, #3e4541, #323a37, #373e3c, #3c4140, #414444, #474848);
 }
 
 .box-border {
