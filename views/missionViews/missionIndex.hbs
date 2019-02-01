@@ -4,8 +4,8 @@
   <ul>
   {{#each missionBrief}}
     <h1><a href="/missionBrief/{{id}}">{{missionTitle}}</a></h1>
-    <p>{{missionLog}}</p>
-    <p>{{missionLocated.planetsVisited}}</p>
+    <p>Mission Log: {{missionLog}}</p>
+    <p>Mission Location: {{missionLocated.planetsVisited}}</p>
   {{/each}}
   </ul>
 {{/if}}

@@ -2,8 +2,8 @@
   {{#with MissionBrief}}
   <div>
     <h1>{{missionTitle}}</h1>
-    <p>{{missionLog}}</p>
-    <p>{{missionLocated.planetsVisited}}</p>
+    <p>Mission Log: {{missionLog}}</p>
+    <p>Mission Location:{{missionLocated.planetsVisited}}</p>
   </div>
   <form action="/missionBrief/{{id}}/edit" method="Get">
     <input type="submit" value="Update Mission Log">
