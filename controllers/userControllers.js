@@ -64,7 +64,7 @@ module.exports = {
     edit: (req, res) => {
         User.findOne({_id: req.params.id})
         .then(user => {
-            res.render('userviews/updateUserForm.hbs', { user });
+            res.render('userViews/updateUserForm.hbs', { user });
           })
     },
     // (PUT Request) Update resource in the database
