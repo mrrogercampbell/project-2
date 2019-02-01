@@ -4,14 +4,14 @@
     <h1>{{name.firstName}} {{name.middleName}} {{name.lastName}}</h1>
     {{!-- How would I get the image to show --}}
     {{!-- <img src="#" alt="Photo of User"> --}}
-    <p>{{rank}}</p>
-    <p>{{placeOfBirth}}</p>
-    <p>{{yearOfBirth}}</p>
-    <p>{{monthOfBirth}}</p>
-    <p>{{dayOfBirth}}</p>
-    <p>{{gender}}</p>
-    <p>{{maritalStatus}}</p>
-    <p>{{serialNumber}}</p>
+    <p>Rank: {{rank}}</p>
+    <p>Place of Birth: {{placeOfBirth}}</p>
+    <p>Year Born: {{yearOfBirth}}</p>
+    <p>Month Born In: {{monthOfBirth}}</p>
+    <p>Day Born: {{dayOfBirth}}</p>
+    <p>Gender: {{gender}}</p>
+    <p>Marital Status: {{maritalStatus}}</p>
+    <p>Serial Number: {{serialNumber}}</p>
   </div>
   <form action="/user/{{id}}/edit" method="Get">
     <input type="submit" value="Update User Profile">
