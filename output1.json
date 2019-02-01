@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5c538ce73815d42ef7378446"},"missionTitle":"Journey to Earth","missionLocated":{"planetsVisited":"Earth"},"missionLog":"Was a great mission!!"}
+{"_id":{"$oid":"5c538ce73815d42ef7378447"},"missionTitle":"Journey to Mars","missionLocated":{"planetsVisited":"Mars"},"missionLog":"Was a great mission!!"}
+{"_id":{"$oid":"5c538ce73815d42ef7378448"},"missionTitle":"Journey to Jupiter","missionLocated":{"planetsVisited":"Jupiter"},"missionLog":"Was a great mission!!"}
+{"_id":{"$oid":"5c538eef280fbd2ec40919c4"},"missionTitle":"Eart","missionLog":"87","missionLocated":{"planetsVisited":"gh"},"__v":0}
