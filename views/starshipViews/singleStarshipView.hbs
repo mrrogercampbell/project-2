@@ -2,10 +2,10 @@
   {{#with starship}}
   <div>
     <h1>{{name}}</h1>
-    <p>{{registry}}</p>
-    <p>{{status}}</p>
-    <p>{{dateStatus}}</p>
-    <p>{{spacecraftClass}}</p>
+    <p>Registry Number: {{registry}}</p>
+    <p>Status: {{status}}</p>
+    <p>Date Commissioned: {{dateStatus}}</p>
+    <p>Space Craft Class: {{spacecraftClass}}</p>
   </div>
  <form action="/starship/{{id}}/edit" method="Get">
     <input type="submit" value="Update User Profile">

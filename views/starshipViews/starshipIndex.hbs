@@ -1,13 +1,13 @@
 <h1>Top Secert List of the Entire Space One Federation Fleet</h1>
 
 {{#if starships}}
-  <ul>
+  <div>
   {{#each starships}}
     <h1><a href="/starship/{{id}}">{{name}}</a></h1>
-    <p>{{registry}}</p>
-    <p>{{status}}</p>
-    <p>{{dateStatus}}</p>
-    <p>{{spacecraftClass}}</p>
+    <p>Registry Number: {{registry}}</p>
+    <p>Status: {{status}}</p>
+    <p>Date Commissioned: {{dateStatus}}</p>
+    <p>Space Craft Class: {{spacecraftClass}}</p>
   {{/each}}
-  </ul>
+  </div>
 {{/if}}
