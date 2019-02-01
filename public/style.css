@@ -5,6 +5,11 @@ body {
     background-image: radial-gradient(circle, #eae7dc, #c2c3b8, #9c9f96, #787d76, #565d57, #4a514c, #3e4541, #323a37, #373e3c, #3c4140, #414444, #474848);
 }
 
+.nava-color {
+    opacity: 0.2;
+    background: rgba(225, 225, 225, 0.2)
+    /* background-image: radial-gradient(circle, #eae7dc, #c2c3b8, #9c9f96, #787d76, #565d57, #4a514c, #3e4541, #323a37, #373e3c, #3c4140, #414444, #474848); */
+}
 .box-border {
     /* border: black 5px solid; */
     background-color: rgba(0, 0, 0, .1);
